@@ -1,0 +1,31 @@
+#footer
+  #footertext Copyright © 2016 | ThisWay Site Template
+  / BEGIN: Background Controller Buttons
+  #bgControl
+    %a.prev{:href => "javascript:void(0);", :onclick => "prevBg()"}
+    %a.play{:href => "javascript:void(0);", :onclick => "playBg()"}
+    %a.pause{:href => "javascript:void(0);", :onclick => "pauseBg()"}
+    %a.next{:href => "javascript:void(0);", :onclick => "nextBg()"}
+  / END: Background Controller Buttons
+  / BEGIN: Share Buttons
+  #share
+    %ul
+      %li
+        %a.tip.fb{:href => "http://www.facebook.com/sharer.php?u=http://www.7precisions.com", "tip-text" => "Facebook"}
+      %li
+        %a.tip.tw{:href => "http://twitter.com/home?status=Check out this Awesome Site - http://www.7precisions.com", "tip-text" => "Twitter"}
+      %li
+        %a.tip.in{:href => "http://www.linkedin.com/shareArticle?mini=true&url=http://www.7precisions.com&title=&summary=&source=", "tip-text" => "LinkedIn"}
+      %li
+        %a.tip.deli{:href => "http://del.icio.us/post?url=http://www.7precisions.com", "tip-text" => "delicious"}
+      %li
+        %a.tip.st{:href => "http://www.stumbleupon.com/submit?url=http://www.7precisions.com", "tip-text" => "StumbleUpon"}
+      %li
+        %a.tip.rss{:href => "http://www.7precisions.com?feed=rss", "tip-text" => "RSS"}
+  / END: Share Buttons
+/ END: Footer
+/
+  BEGIN: Audio List
+  \// Every li includes a song url. But it doesn't contain file extensions.
+  Because some off browsers support .mp3 and others support .ogg format. It automatically recognise it.
+  For the wider browser support you should put filename.mp3, filename.ogg formats to the folder.

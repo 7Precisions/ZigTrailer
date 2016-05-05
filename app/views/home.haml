@@ -1,0 +1,171 @@
+#body-wrapper
+  / BEGIN: Main Elements; Please don't change these items
+  #bgImage
+    #bgImageWrapper
+  #bgPattern
+  #bgText
+    %h3
+    .subText
+  #content
+    #contentBox
+    #contentLoading
+      #CtLoading
+        Loading
+        %br/
+        %img{:alt => "", :height => "10", :src => asset_path("01/images/loading1.gif"), :width => "80"}/
+  / END: Main Elements
+  / BEGIN: Vertical Side Bar
+  /
+    \// Every <li> includes Thumbnail, Video or Background Image
+    Caption and Description elementes
+  %ul#bgImages
+    / BEGIN: Background Element
+    %li
+      / Thumbnail Image must be 120x80px  and class="thumb"
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/18303923_th.jpg")}/
+      /
+        If you want to use IMAGE at background its width must be between 1024x768px and 1920x1080px. And you must use class="source".
+        If you want to use VIDEO at background it must be in iframe tags like below;
+        <iframe src="http://player.vimeo.com/video/18303923?title=0&byline=0&portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+        Note: You must define its width and height values of your original video. It supports youtube or vimeo.
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/12643755?api=1&title=0&byline=0&portrait=0", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      / BEGIN: description; h3 and p tags are optional
+      %h3 BIANCA JOHNSON
+      %p Aliquam tristique eleifend ante, id tincidunt nunc egestas iaculis. Maecenas a enim orci, vel gravida posuere.
+      / END: description
+    / END: Bakground Element
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/18058390_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/18058390?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 CLAIRE WILLIAMS
+      %p Vestibulum vitae condimentum dolor. Aenean fermentum, tellus at fermentum vulputate, velit est vulputate amet.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/18081777_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/18081777?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 CAPTION 3
+      %p Description one Duis et sapien non urna mollis imperdiet. Maecenas mattis quam non mi vestibulum vel facilisis neque laoreet. Proin non ipsum nisi. Praesent suscipit sodales tortor quis dapibus.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/18052127_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/18052127?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 FABIANA BROWN
+      %p Integer sit amet neque lacus, nec vehicula erat. Aliquam ac sem ut magna mattis tristique. Duis lorem posuere.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/18052015_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "315", :src => "http://www.youtube.com/v/P_jpvpFwnwg?wmode=transparent&rel=0", :videoid => "P_jpvpFwnwg", :videotype => "youtube", :width => "420"}
+      %h3 GABRIELLA DAVIS
+      %p Mauris id quam mi, nec dictum mauris. Morbi non eros quis erat facilisis scelerisque at in sapien. Etiam amet.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/11984342_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "265", :src => "http://player.vimeo.com/video/11984342?api=1&title=0&byline=0&portrait=0&color=ffffff", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 IOLA MILLER
+      %p Morbi ligula massa, ornare eu venenatis eget, porttitor eget dui. Duis fringilla sapien nec est interdum amet.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/18058407_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/18058407?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 MARIA WILSON
+      %p Suspendisse bibendum, erat et porttitor ultricies, nibh arcu molestie ligula, a lobortis leo ipsum sed nullam.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/16666881_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/16666881?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 GILLIAN MOORE
+      %p Etiam sit amet ante tortor, ut adipiscing lacus. Curabitur sapien tellus, varius vel posuere quis turpis duis.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/16500156_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/16500156?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 CAMERON ANDERSON
+      %p Aliquam volutpat pulvinar eros sit amet ultricies. Vivamus tincidunt suscipit sodales. Donec dictum, tortora.
+    %li
+      %img.thumb{:alt => "", :src => asset_path("01/images/background/16501557_th.jpg")}/
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "225", :src => "http://player.vimeo.com/video/16501557?api=1&title=0&byline=0&portrait=0&color=7d7d7d", :videotype => "vimeo", :webkitallowfullscreen => "", :width => "400"}
+      %h3 ARIANNA SMITH
+      %p Mauris viverra tincidunt est, a bibendum turpis hendrerit eu. Aenean ac elit dolor. Donec commodo, enim metus.
+  / BEGIN: Main Menu
+  #menu-container
+    / BEGIN: Logo
+    #logo
+      %img{:src => asset_path("01/images/logo.png"), :title => "This Way FullScreen"}/
+    / END: Logo
+    /
+      \// Menu classes must be used with the same hierarchy and the same class names
+    #mainmenu
+      .menu-header
+        %ul#menu-main-menu.menu
+          %li#menu-item-1
+            %a{:href => "/"}
+              %span.title HOME
+          %li#menu-item-2
+            %a{:href => "#!#"}
+              %span.title ABOUT
+            / When using submenu ul tag must include class="sub-menu"
+            %ul.sub-menu
+              %li#menu-item-21
+                %a{:href => "#!about.html"}
+                  %span.title COMPANY
+              %li#menu-item-22
+                %a{:href => "#!columns.html"}
+                  %span.title 4 COLUMNS
+              %li#menu-item-23
+                %a{:href => "#!typography.html"}
+                  %span.title TYPOGRAPHY
+              %li#menu-item-24
+                %a{:href => "#!quotes.html"}
+                  %span.title QUOTES
+              %li#menu-item-25
+                %a{:href => "#!other.html"}
+                  %span.title OTHERS
+          %li#menu-item-3
+            %a{:href => "#!blog.html"}
+              %span.title BLOG
+          %li#menu-item-4
+            %a{:href => "http://www.themeforest.net", :target => "_blank"}
+              %span.title LINK
+          %li#menu-item-5
+            %a{:href => "#!#"}
+              %span.title PORTFOLIO
+            %ul.sub-menu
+              %li#menu-item-51
+                %a{:href => "#!portfolio.html"}
+                  %span.title TWO COLUMNS
+              %li#menu-item-52
+                %a{:href => "#!portfolio4.html"}
+                  %span.title FOUR COLUMNS FILTER
+              %li#menu-item-53
+                %a{:href => "#!portfolioVideo.html"}
+                  %span.title VIDEO PORTFOLIO
+          %li#menu-item-6
+            %a{:href => "#!contact.html"}
+              %span.title CONTACT
+    / BEGIN: Menu Opener; Please dont remove this element to use menu.
+    #menuOpener MENU
+    #menuCloser CLOSE
+    / END: Menu Opener
+  / END: Main Menu
+  / BEGIN: Twitter
+  #twt
+    %a.twButton{:href => "javascript:void(0);"}
+    .twContent
+      %h3 TWITTER
+      %ul
+        / BEGIN: Tweet
+        %li
+          Integer est erat, mattis ac semper sed, ultricies egestas orci. Ut pharetra venenatis odio et lobortis. @Suspendisse
+          %span 2 hours ago
+        / END: Tweet
+        %li
+          Aenean dictum tincidunt neque, id dictum eros feugiat nec. Pellentesque tortor. @Sapien
+          %span 3 hours ago
+        %li
+          Morbi suscipit eros in elit eleifend tempor. Curabitur non lacus lectus, et ullamcorper. @massa
+          %span 4 hours ago
+        %li
+          Etiam id nisi eu ante tempor viverra. Nam ut justo quis sapien ullamcorper. @dapibus
+          %span 5 hours ago
+  / END: Twitter
+  / BEGIN: Audio Controller; Please don't remove this element
+  #audioControls
+    %a.btn.prev{:href => "javascript:void(0);"}
+    %a.btn.play{:href => "javascript:void(0);"}
+    %a.btn.pause{:href => "javascript:void(0);"}
+    %a.btn.next{:href => "javascript:void(0);"}
+  / END: Audio Controller
+  / BEGIN: Footer

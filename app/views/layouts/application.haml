@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ZigTrailer | Watch, share & Download New Trailer Videos
+    %meta{:content => "!", :name => "fragment"}/
+    %meta{:content => "index,follow", :name => "robots"}/
+    = stylesheet_link_tag    'application', media: 'all'
+    %link#contentFont-css{:href => "http://fonts.googleapis.com/css?family=PT+Sans:regular&subset=cyrillic,latin", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    %link#headerFont-css{:href => "http://fonts.googleapis.com/css?family=Oswald", :rel => "stylesheet", :type => "text/css"}/
+    = javascript_include_tag 'application'
+    %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=true", :type => "text/javascript"}
+    %link{:href => "/assets/themes/01/images/favicon_dark.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    = csrf_meta_tags
+  %body
+    = yield
+    = render '/shared/footer'
+    = render '/shared/audiolist'
+    = render '/shared/loader'
