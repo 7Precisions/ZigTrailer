@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title ZigTrailer Login
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+    = stylesheet_link_tag    'admin', media: 'all'
+    / HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    / WARNING: Respond.js doesn't work if you view the page via file://
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    %link{:href => "/assets/themes/01/images/favicon_dark.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    = csrf_meta_tags
+  %body{class: 'hold-transition login-page'}
+    .login-box
+      .login-logo
+        %a{:href => "../../index2.html"}
+          %b> User Login
+      / /.login-logo
+      = render '/admin/shared/flash_messages'
+      = devise_error_messages!
+      .login-box-body
+        %p.login-box-msg Sign in to start your session
+        %form{:action => user_session_path, :method => "post"}
+          .form-group.has-feedback
+            %input.form-control{:placeholder => "Email", :type => "email", autofocus: true, required: true}/
+            %span.glyphicon.glyphicon-envelope.form-control-feedback
+          .form-group.has-feedback
+            %input.form-control{:placeholder => "Password", :type => "password", required: true}/
+            %span.glyphicon.glyphicon-lock.form-control-feedback
+          .row
+            .col-xs-4
+              %button.btn.btn-primary.btn-block.btn-flat{:type => "submit"} Sign In
+            / /.col
+      / /.login-box-body
+    / /.login-box
+    = javascript_include_tag 'login'

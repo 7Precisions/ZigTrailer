@@ -43,6 +43,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry'
 end
 
 gem 'haml'
@@ -61,3 +62,7 @@ gem 'dotenv'
 gem 'traceroute'
 gem 'newrelic_rpm'
 gem 'exception_notification'
+gem 'youtube_it'
+gem 'font-awesome-rails'
+gem 'ionicons-rails'
+gem 'devise'
