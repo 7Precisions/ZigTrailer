@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: ZigTrailer_production
-  username: ZigTrailer
   password: <%= ENV['ZIGTRAILER_DATABASE_PASSWORD'] %>
