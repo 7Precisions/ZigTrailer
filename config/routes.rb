@@ -9,5 +9,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
   	root to: 'base#dashboard'
+  	# get '/categories/new' => 'categories#new'
+  	# post '/categories' => 'categories#new'
+  	resources :categories
+    resources :movietrailers
   end
 end
