@@ -1,0 +1,31 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Categories
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li.active Categories
+  / Main content
+  %section.content
+    / Info boxes
+    .row
+      .col-xs-12
+        .box.box-info
+          .box-body
+            .table-responsive
+              %table.table.no-margin
+                %thead
+                  %tr
+                    %th ID
+                    %th Title
+                %tbody
+                  - @categories.each do |c|
+                    %tr
+                      %td 
+                        =c.you_id
+                      %td 
+                        =c.you_title

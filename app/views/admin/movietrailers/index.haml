@@ -1,0 +1,40 @@
+.content-wrapper
+  / Content Header (Page header)
+  %section.content-header
+    %h1
+      Movie Trailers
+    %ol.breadcrumb
+      %li
+        %a{:href => "#"}
+          %i.fa.fa-dashboard
+          Home
+      %li.active Movie Trailers
+  / Main content
+  %section.content
+    / Info boxes
+    .row
+      .col-xs-12
+        .box.box-info
+          .box-body
+            .table-responsive
+              %table.table.no-margin
+                %thead
+                  %tr
+                    %th Desc
+                    %th Title
+                    %th Published At
+                    %th Total Views
+                    %th Category
+                %tbody
+                  - @trailers.each do |t|
+                    %tr
+                      %td
+                        = t.desc
+                      %td
+                        = t.title
+                      %td
+                        = t.published_at
+                      %td
+                        = t.total_view
+                      %td
+                        = t.category_id
