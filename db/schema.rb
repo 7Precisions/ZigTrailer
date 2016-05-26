@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 20160512080032) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "movie_trailers", force: :cascade do |t|
+    t.text     "desc"
+    t.string   "title"
+    t.date     "published_at"
+    t.integer  "total_views"
+    t.integer  "category_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "movietrailers", force: :cascade do |t|
     t.text     "desc"
     t.string   "title"

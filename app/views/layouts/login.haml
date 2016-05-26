@@ -14,26 +14,5 @@
     %link{:href => "/assets/themes/01/images/favicon_dark.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
     = csrf_meta_tags
   %body{class: 'hold-transition login-page'}
-    .login-box
-      .login-logo
-        %a{:href => "../../index2.html"}
-          %b> User Login
-      / /.login-logo
-      = render '/admin/shared/flash_messages'
-      = devise_error_messages!
-      .login-box-body
-        %p.login-box-msg Sign in to start your session
-        %form{:action => user_session_path, :method => "post"}
-          .form-group.has-feedback
-            %input.form-control{:placeholder => "Email", :type => "email", autofocus: true, required: true}/
-            %span.glyphicon.glyphicon-envelope.form-control-feedback
-          .form-group.has-feedback
-            %input.form-control{:placeholder => "Password", :type => "password", required: true}/
-            %span.glyphicon.glyphicon-lock.form-control-feedback
-          .row
-            .col-xs-4
-              %button.btn.btn-primary.btn-block.btn-flat{:type => "submit"} Sign In
-            / /.col
-      / /.login-box-body
-    / /.login-box
+    = yield
     = javascript_include_tag 'login'

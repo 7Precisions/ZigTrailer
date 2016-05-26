@@ -9,7 +9,7 @@ class Admin::CategoriesController < ApplicationController
 	end
 
 	def create
-		@category = Category.create!(you_id: params[catecory][:you_id],
+		@category = Category.create!(you_id: params[category][:you_id],
 					you_title: params[catecory][:you_title])
 		flash[:success] = "Category successfully added.."
 	end
